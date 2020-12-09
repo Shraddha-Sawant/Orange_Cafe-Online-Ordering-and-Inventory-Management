@@ -1,0 +1,33 @@
+DROP TABLE [dbo].[oc_menu]
+GO
+CREATE TABLE [dbo].[oc_menu](
+[item] [varchar](50) NOT NULL,
+[price] [decimal](3, 2) NOT NULL,
+[item_type] [varchar](50) NOT NULL
+) ON [PRIMARY]
+GO
+
+DROP TABLE [dbo].[Cafe_inventory1]
+GO
+CREATE TABLE [dbo].[Cafe_inventory1](
+[Product] [varchar](50) NOT NULL,
+[Quantity] [int] NOT NULL,
+ CONSTRAINT [PK_Cafe_inventory1] PRIMARY KEY CLUSTERED
+(
+[Product] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+DROP TABLE [dbo].[ocust3]
+GO
+CREATE TABLE [dbo].[ocust3](
+[cust_id] [int] IDENTITY(1,1) NOT NULL,
+[cust_name] [varchar](50) NOT NULL,
+[cust_contact] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_ocust3] PRIMARY KEY CLUSTERED
+(
+[cust_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
